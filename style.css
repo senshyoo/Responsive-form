@@ -1,0 +1,87 @@
+body {
+    padding: 2rem; /* Adjust padding relative to viewport */
+    justify-content: center;
+    min-height: 100vh; /* Ensure body covers full viewport height */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.form-container {
+    border: black 0.1rem solid;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem;
+    justify-content: space-around;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 80%; /* Responsive width */
+    max-width: 1200px; /* Limit maximum width for larger screens */
+    min-width: 300px; /* Prevent shrinking too much */
+    background-image: url('./360_F_153499972_DqxCJ60yGirZHvSryJi8KuLm973ze3wi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure background scales */
+    background-position: center;
+    height: auto;
+    min-height: 50vh; /* Ensure it covers at least 50% of the viewport height */
+}
+
+.textn, .textn2 {
+    padding: 2rem; /* Relative padding */
+}
+
+input {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    outline: 0;
+    background: transparent;
+    width: 100%; /* Ensure input scales with form */
+    font-size: 1rem; /* Responsive font size */
+}
+
+#names-container, #pwd-eml {
+    display: flex;
+    flex-wrap: wrap; /* Stack items on smaller screens */
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#btns {
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    border-radius: 2rem;
+    color: white;
+    transition-duration: 0.4s;
+    border: none;
+}
+
+#btns:hover {
+    background-color: grey;
+    color: black;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 800px), (max-height: 1000px) {
+    .form-container {
+        width: 90%; /* Make form smaller on small screens */
+        padding: 1.5rem;
+    }
+
+    #pwd-eml, #names-container {
+        display: block; /* Stack elements vertically */
+    }
+
+    #eml {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    #btn {
+        margin-left: 0;
+    }
+}
